@@ -1,2 +1,2 @@
-# woongchan jeon
+# Woongchan Jeon
 Academic Website
