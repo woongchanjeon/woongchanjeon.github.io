@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>wjeon</title>
-  <style>
+  <style> /* AER red - #994856 background - #F1F0EC */
+    @import url(//fonts.googleapis.com/earlyaccess/notosans.css);
     a:link { color: #363C3F; text-decoration: none; }
     a:visited { color: #363C3F; text-decoration: none; }
     a:hover { color: #994856; text-decoration: underline; }
@@ -13,7 +14,7 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: white;
+        background-color: #F1F0EC;
         position: fixed;
         top: 0;
         width: 100%;
@@ -23,60 +24,80 @@
     }
     li a {
         display: block;
-        color: white;
-        font-family:Helvetica;
+        color: #F1F0EC;
+        font-family:'Noto Sans', sans-serif;
+        font-weight:bolder;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
     }
     li a:hover:not(.active) {
-        background-color: white;
+        background-color: #F1F0EC;
     }
 
     .active {
-        background-color: white;
+        background-color: #F1F0EC;
     }
     .main {
         margin-top: 30px; /* Add a top margin to avoid content overlay */\
     }
     body{
-        background-color: white;
+        background-color: #F1F0EC;
     }
     #container {
         width: 800px;
         margin: 0px auto;
         padding: 20px;
-        background-color: white;
+        background-color: #F1F0EC;
     }
     #intro {
         width: 400px;
         padding: 20px;
         margin-bottom: 20px;
         float: left;
-        background-color: white;
+        background-color: #F1F0EC;
     }
     #pic {
         width: 300px;
         padding: 20px;
         margin-bottom: 20px;
         float: right;
-        background-color: white;
+        background-color: #F1F0EC;
     }
     #research {
         clear: both;
         padding: 20px;
-        background-color: white;
+        background-color: #F1F0EC;
     }
     #teaching {
         clear: both;
         padding: 20px;
-        background-color: white;
+        background-color: #F1F0EC;
+    }
+    h1 {
+        color:#363C3F;
+        font-family:'Noto Sans', sans-serif;
+    }
+    h2 {
+        color:#363C3F;
+        font-family:'Noto Sans', sans-serif;
+    }
+    h4 {
+        color:#363C3F;
+        font-family:'Noto Sans', sans-serif;
     }
     p {
         color:#363C3F;
-        line-height:1.4; 
+        line-height:1.5; 
         margin-top: 20px; 
         margin-bottom: 20px;
+        font-family:'Noto Sans', sans-serif;
+        font-weight:lighter;
+    }
+    div {
+        color:#363C3F;
+        font-family:'Noto Sans', sans-serif;
+        font-weight:lighter;
     }
   </style>
 </head>
@@ -92,29 +113,29 @@
         </ul>
 
         <div id="intro">
-            <img src="name.png" width="400">
+            <h1>Woongchan Jeon</h1>
 
             <p> Welcome to my academic webpage! I am currently a PhD student in Economics at UCSB.</p>
 
-            <p> My research focuses on designing optimal environmental policies from a macroeconomic perspective. Specifically, I am interested in tax and transfer system in imperfect markets with climate change externalities. You can find my <a href="CV.pdf" style="color:#994856" > <b>CV here</b></a>.</p>
+            <p> My research focuses on designing optimal environmental policies from a macroeconomic perspective. Specifically, I am interested in tax and transfer system in imperfect markets with climate externalities. You can find my <a href="CV.pdf" style="color:#994856"><b>CV here</b></a>.</p>
             
-            <p> <a href="https://econ.ucsb.edu"> Department of Economics</a><br>
+            <p><a href="https://econ.ucsb.edu"> Department of Economics</a><br>
                 2015 North Hall <br>
                 University of California <br>
                 Santa Barbara, CA 93106-9210 <br>
-                <a href="mailto:wjeon@ucsb.edu"><b>wjeon[at]ucsb.edu</b></a></p>
+                <a href="mailto:wjeon@ucsb.edu"><b>wjeon [at] ucsb.edu</b></a></p>
         </div>
 
         <div id="pic"> <img src="profile.png" width="400"> </div>
 
         <div id="research"> 
             
-            <a name="research"> <img src="research.png" width="100"> </a>
+            <h2 name="research">Research</h2>
 
-            <p style="font-family:Helvetica;"> <b>work in progress</b> </p>
+            <h4>work in progress</h4>
             
-            <i> General equilibrium effects of private adaptation to climate change - </i>
-            <a onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';" href="javascript:void(0)" style="color:#994856">abstract</a><div style="DISPLAY: none; margin-left:20px; color:#363C3F;"><br/>
+            General equilibrium effects of private adaptation to climate change -
+            <a onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';" href="javascript:void(0)" style="color:#994856"><b>abstract</b></a><div style="DISPLAY: none; margin-left:20px; color:#363C3F;"><br/>
                     What are general equilibrium effects of climate externalities on utility and production when private adaptation is available to households? Biological and behavioral effects of global mean temperature increase can be different when private adaptation is available. Ignoring avoidance behavior may lead to mischaracterizations of social welfare. When private adaptation is available from energy sector (market), capital and labor will reallocate in a decentralized economy. The reallocation may lead to potential negative feedback, increasing carbon emissions. This paper investigates the optimal tax system to correct for climate externalities with the consideration of potential negative feedback.&nbsp;
                 <a onclick="this.parentNode.style.display='none';" href="javascript:void(0)" style="color:#994856">
                 (Click here to close)
@@ -122,10 +143,10 @@
         </div>
 
         <div id="teaching"> 
+
+            <h2 name="teaching">Teaching</h2>
             
-                <a name="teaching"> <img src="teaching.png" width="100"> </a>
-            
-                <p> UCSB PhD Math Camp - <a href="https://wjeon01.github.io/Math_Camp/" style="color:#994856">link</a></p>
+                <p> UCSB PhD Math Camp - <a href="https://wjeon01.github.io/Math_Camp/" style="color:#994856"><b>link</b></a></p>
         </div>
 
     </div>
