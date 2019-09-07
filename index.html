@@ -7,18 +7,19 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title> Woongchan Jeon, UCSB Economics </title>
   <style> 
     @import url(//fonts.googleapis.com/earlyaccess/notosans.css);
-    a:link { color: #363C3F; font-size: 15px; font-weight:600; text-decoration: none; }
+    a { color: #363C3F; text-decoration: none; }
+    a:link { color: #363C3F; font-size: 15px; font-weight:600;  text-decoration: none; }
     a:visited { color: #363C3F; text-decoration: none; }
     a:hover { color: #994856; text-decoration: underline; }
     a:active { color: #363C3F; text-decoration: none; }
     ul {
         list-style-type: none;
         margin: 0;
-        margin-left: 5px;
-        padding: 0;
+        padding: 5px;
         overflow: hidden;
         background-color: #F1F0EC;
         position: fixed;
@@ -27,29 +28,46 @@
     }
     li {
         float: left;
+        padding-left:0px;
+        padding-right:10px;
     }
     li a {
+        position: relative;
         display: block;
         color: #F1F0EC;
         font-family:'Noto Sans', sans-serif;
         font-weight:bolder;
         text-align: center;
-        padding: 14px 16px;
+        margin: 16px;
+        padding-bottom: 10px;
         text-decoration: none;
     }
-    li a:hover:not(.active) {
-        background-color: #F1F0EC;
+    li a:link { color: #878b8C; font-size: 18px; font-weight:600;  text-decoration: none; }
+    li a:visited { color: #878b8C; text-decoration: none; }
+    li a:hover { color: #363C3F; text-decoration: none; }
+    li a:active { color: #878b8C; text-decoration: none; }
+    li a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        left: 0;
+        background-color: #363C3F;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
     }
-
-    .active {
-        background-color: #F1F0EC;
+    li a:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
     }
-    .main {
-        margin-top: 30px; /* Add a top margin to avoid content overlay */\
-    }
-    body{
-        background-color: #F1F0EC;
-    }
+    .active { background-color: #F1F0EC; }
+    .main { margin-top: 30px; }
+    body{ background-color: #F1F0EC;}
     #container {
         width: 800px;
         margin: 0px auto;
@@ -57,13 +75,14 @@
     }
     #intro {
         width: 400px;
+        margin-top: 25px;
         padding: 20px;
         float: left;
         background-color: #F1F0EC;
     }
     #pic {
         width: 300px;
-        margin-top: 25px;
+        margin-top: 60px;
         padding: 20px;
         float: right;
         background-color: #F1F0EC;
@@ -78,18 +97,9 @@
         padding: 20px;
         background-color: #F1F0EC;
     }
-    h1 {
-        color:#363C3F;
-        font-family:'Noto Sans', sans-serif;
-    }
-    h2 {
-        color:#363C3F;
-        font-family:'Noto Sans', sans-serif;
-    }
-    h4 {
-        color:#363C3F;
-        font-family:'Noto Sans', sans-serif;
-    }
+    h1 { color:#363C3F; font-family:'Noto Sans', sans-serif; }
+    h2 { color:#363C3F; font-family:'Noto Sans', sans-serif; }
+    h4 { color:#363C3F; font-family:'Noto Sans', sans-serif; }
     p {
         color:#363C3F;
         line-height:1.5; 
@@ -106,21 +116,28 @@
 
     <div id="container">
         <ul>
-            <li><a href="https://woongchanjeon.com/" style="font-size:18px"><b>Home</b></a></li>
-            <!--li><a href="CV.pdf" style="font-size:18px"><b>Curriculum Vitae</b></a></li-->
-            <!--li><a href="#research" style="font-size:18px"><b>Research</b></a></li-->
-            <li><a href="#teaching" style="font-size:18px"><b>Teaching</b></a></li>
+            <li><a href="https://woongchanjeon.com/"><b>Home</b></a></li>
+            <!--li><a href="#research"><b>Research</b></a></li-->
+            <li><a href="#teaching"><b>Teaching</b></a></li>
+            <!--li><a href="CV.pdf"><b>CV</b></a></li-->
         </ul>
 
         <div id="intro">
-            <p style="font-size:40px;font-weight:500;">Woongchan Jeon<p>
-
+            <h1>Woongchan Jeon</h1>
             <p> Welcome to my academic webpage! I am currently a Ph.D. student in the <a href="https://econ.ucsb.edu" style="font-weight:1">Department of Economics</a> at University of California, Santa Barbara.<br> <br>
 
-            My research focuses on designing optimal environmental policies from a macroeconomic perspective. <!--Specifically, I am interested in tax and transfer system in imperfect markets with climate externalities. You can find my <a href="CV.pdf">CV here</a>.--> I can be reached via email <br> <a href="mailto:wjeon@ucsb.edu">wjeon [at] ucsb [dot] edu</a></p>
+            My research focuses on designing optimal environmental policies from a macroeconomic perspective. <!--Specifically, I am interested in tax and transfer system in imperfect markets with climate externalities. You can find my <a href="CV.pdf">CV here</a>.--> I can be reached via email <br> <a href="mailto:wjeon@ucsb.edu">wjeon [at] ucsb [dot] edu</a></p> 
         </div>
 
-        <div id="pic"> <img src="profile.png" width="350"> </div>
+        <div id="pic"> 
+            <img src="profile.png" width="350">
+            <p style="margin-left: 110px;">
+            <a href="mailto:wjeon@ucsb.edu"><img src="email_sign.png" onmouseover="this.src='email_hover.png'" onmouseout="this.src='email_sign.png'" width="20" vspace="10" hspace="10"></a> 
+            <!--img src="google_sign.png" onmouseover="this.src='google_hover.png'" onmouseout="this.src='google_sign.png'" width="20" vspace="10" hspace="10"--> 
+            <a href="https://github.com/woongchanjeon"><img src="github_sign.png" onmouseover="this.src='github_hover.png'" onmouseout="this.src='github_sign.png'" width="20" vspace="10" hspace="10"></a> 
+            <a href="https://twitter.com/woongchanjeon"><img src="twitter_sign.png" onmouseover="this.src='twitter_hover.png'" onmouseout="this.src='twitter_sign.png'" width="20" vspace="10" hspace="10"></a>
+            </p>
+        </div>
 
         <!--div id="research"> 
             
@@ -128,7 +145,7 @@
 
             <h4>work in progress</h4>
             
-                <p>General equilibrium effects of private adaptation to climate externalities</p>
+                <p>Optimal mitigation with private adaptation</p>
 
         </div-->
 
@@ -136,7 +153,8 @@
 
             <h2 name="teaching">Teaching</h2>
             
-                <p>UCSB Ph.D. Math Camp - [<a href="https://woongchanjeon.github.io/mathcamp/">Link</a>]</p>
+                <p>UCSB Economics Ph.D. Math Camp - [<a href="https://woongchanjeon.github.io/mathcamp/">Link</a>]</p>
+                <p>Intermediate Microeconomic Theory</p>
         </div>
 
     </div>
