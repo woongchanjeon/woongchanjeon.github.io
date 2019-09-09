@@ -7,7 +7,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <meta name="viewport" content="width=400, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title> Woongchan Jeon, UCSB Economics </title>
   <style> 
     @import url(//fonts.googleapis.com/earlyaccess/notosans.css);
@@ -69,20 +69,21 @@
     .main { margin-top: 30px; }
     body{ background-color: #F1F0EC;}
     #container {
-        width: 800px;
-        margin: 0px auto;
+        width: 940px;
+        margin: 10px auto;
+        padding: 20px;
         background-color: #F1F0EC;
     }
     #intro {
-        width: 400px;
-        margin-top: 25px;
+        width: 580px;
+        margin-top: 20px;
         padding: 20px;
         float: left;
         background-color: #F1F0EC;
     }
     #pic {
-        width: 300px;
-        margin-top: 60px;
+        width: 260px;
+        margin-top: 20px;
         padding: 20px;
         float: right;
         background-color: #F1F0EC;
@@ -97,6 +98,19 @@
         padding: 20px;
         background-color: #F1F0EC;
     }
+    @media ( max-width: 480px ) {
+        #container {
+          width: auto;
+        }
+        #pic {
+          float: none;
+          width: auto;
+        }
+        #intro {
+          float: none;
+          width: auto;
+        }
+      }
     h1 { color:#363C3F; font-family:'Noto Sans', sans-serif; }
     h2 { color:#363C3F; font-family:'Noto Sans', sans-serif; }
     h4 { color:#363C3F; font-family:'Noto Sans', sans-serif; }
@@ -130,11 +144,12 @@
         </div>
 
         <div id="pic"> 
-            <img src="/image/profile.png" width="350">
+            <img src="profile.png" width="350">
             <p style="margin-left: 110px;">
-            <a href="mailto:wjeon@ucsb.edu"><img src="/image/email_sign.png" onmouseover="this.src='/image/email_hover.png'" onmouseout="this.src='/image/email_sign.png'" width="20" vspace="10" hspace="10"></a> 
-            <a href="https://github.com/woongchanjeon"><img src="/image/github_sign.png" onmouseover="this.src='/image/github_hover.png'" onmouseout="this.src='/image/github_sign.png'" width="20" vspace="10" hspace="10"></a> 
-            <a href="https://twitter.com/woongchanjeon"><img src="/image/twitter_sign.png" onmouseover="this.src='/image/twitter_hover.png'" onmouseout="this.src='/image/twitter_sign.png'" width="20" vspace="10" hspace="10"></a>
+            <a href="mailto:wjeon@ucsb.edu"><img src="email_sign.png" onmouseover="this.src='email_hover.png'" onmouseout="this.src='email_sign.png'" width="20" vspace="10" hspace="10"></a> 
+            <!--img src="google_sign.png" onmouseover="this.src='google_hover.png'" onmouseout="this.src='google_sign.png'" width="20" vspace="10" hspace="10"--> 
+            <a href="https://github.com/woongchanjeon"><img src="github_sign.png" onmouseover="this.src='github_hover.png'" onmouseout="this.src='github_sign.png'" width="20" vspace="10" hspace="10"></a> 
+            <a href="https://twitter.com/woongchanjeon"><img src="twitter_sign.png" onmouseover="this.src='twitter_hover.png'" onmouseout="this.src='twitter_sign.png'" width="20" vspace="10" hspace="10"></a>
             </p>
         </div>
 
