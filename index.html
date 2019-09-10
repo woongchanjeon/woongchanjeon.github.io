@@ -16,6 +16,53 @@
     a:visited { color: #363C3F; text-decoration: none; }
     a:hover { color: #994856; text-decoration: underline; }
     a:active { color: #363C3F; text-decoration: none; }
+    .menuicon{
+        text-align:right;
+        background-color:#F1F0EC;
+        color:#363C3F;
+        font-size:15px;
+        font-family:'Noto Sans', sans-serif;
+    }
+    div#myMenuicon{
+        display:none;
+    }
+    .sidenav{
+            width: 0;
+            height: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right:0;
+            background-color: #363C3F;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            text-align:center;
+    }
+    .sidenav a{
+        padding: 10px;
+        margin: 20px;
+        text-decoration: none;
+        font-size: 20px;
+        font-family:'Noto Sans', sans-serif;
+        color: #F1F0EC;
+        display: block;
+        transition: 0.3s;
+    }
+    .sidenav a:hover{
+        color: #F1F0EC;
+    }
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0px;
+        right: 3px;
+        font-size: 20px;
+    }
+    div.content {
+        margin-left: 0px;
+        padding: 1px 16px;
+        height: auto;
+    }
     ul {
         list-style-type: none;
         margin: 0;
@@ -28,8 +75,6 @@
     }
     li {
         float: left;
-        padding-left:0px;
-        padding-right:10px;
     }
     li a {
         position: relative;
@@ -38,8 +83,8 @@
         font-family:'Noto Sans', sans-serif;
         font-weight:bolder;
         text-align: center;
-        margin: 16px;
-        padding-bottom: 10px;
+        margin: 15px;
+        padding-bottom: 0px;
         text-decoration: none;
     }
     li a:link { color: #878b8C; font-size: 18px; font-weight:600;  text-decoration: none; }
@@ -69,44 +114,48 @@
     .main { margin-top: 30px; }
     body{ background-color: #F1F0EC;}
     #container {
-        width: 1000px;
+        width: 960px;
         margin: 0px auto;
         padding: 0px;
         background-color: #F1F0EC;
+        transition: margin-left 0.5s;
     }
     #intro {
         width: 450px;
-        margin-top: 20px;
+        margin-top:15px;
         padding: 15px;
         float: left;
         background-color: #F1F0EC;
     }
     #pic {
         width: 450px;
-        margin-top: 20px;
-        padding: 10px;
-        float: right;
+        margin-top:15px;
+        padding: 15px;
+        float:left;
         background-color: #F1F0EC;
     }
     #research {
         clear: both;
-        padding: 10px;
+        padding: 15px;
         background-color: #F1F0EC;
     }
     #teaching {
         clear: both;
-        padding: 10px;
+        padding: 15px;
         background-color: #F1F0EC;
     }
-    @media ( max-width: 1080px ) {
+    @media screen and ( max-width: 480px ) {
+        #myTopnav {
+            display:none
+        }
         #container {
           width: auto;
         }
-        #pic {
+        #intro {
           float: none;
           width: auto;
         }
-        #intro {
+        #pic {
           float: none;
           width: auto;
         }
@@ -129,16 +178,29 @@
 
 <body leftmargin="30" topmargin="30">
 
+    <div id="myMenuicon" class="menuicon">
+        <span style="cursor:pointer;" onclick="openNav()"><b>&#9776;</b></span>
+    </div>
+
+    <div id="mySidenav" class="sidenav" >
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html"><b>Home</b></a>
+            <!--a href="research.html"><b>Research</b></a-->
+            <a href="teaching.html"><b>Teaching</b></a></li>
+            <!--a href="CV.pdf"><b>CV</b></a-->
+    </div>           
+
     <div id="container">
-        <ul>
+        
+        <ul id="myTopnav">
             <li><a href="index.html"><b>Home</b></a></li>
             <!--li><a href="research.html"><b>Research</b></a></li-->
             <li><a href="teaching.html"><b>Teaching</b></a></li>
             <!--li><a href="CV.pdf"><b>CV</b></a></li-->
         </ul>
 
-        <div id="intro">
-            <h2>Woongchan Jeon</h2>
+        <div id="intro">     
+            <h1>Woongchan Jeon</h1>
             <p> Welcome to my academic webpage! I am currently a Ph.D. student in the <a href="https://econ.ucsb.edu" style="font-weight:1">Department of Economics</a> at University of California, Santa Barbara.<br> <br>
 
             My research focuses on designing optimal environmental policies from a macroeconomic perspective. <!--Specifically, I am interested in tax and transfer system in imperfect markets with climate externalities. You can find my <a href="cv/CV.pdf">CV here</a>.--> I can be reached via email <a href="mailto:wjeon@ucsb.edu">wjeon [at] ucsb [dot] edu</a></p> 
@@ -156,5 +218,14 @@
 
     </div>
 
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
 </body>
 </html>
