@@ -3,155 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="W8w3-ywfyPmfK8xtszol74k2UmcH1Z4jjSvN6b3K1zM" />
-  <meta name="description" content="Woongchan Jeon Ph.D. Student in the Department of Economics at University of California, Santa Barbara" />
+  <meta name="description" content="Woongchan Jeon Ph.D. Candidate in the Department of Economics at the University of California, Santa Barbara" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
   <title> Woongchan Jeon, UCSB Economics </title>
+
   <style> 
     @import url(//fonts.googleapis.com/earlyaccess/notosans.css);
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+        
     a { color: #363C3F; text-decoration: none; }
-    a:link { color: #363C3F; font-size: 15px; font-weight:600;  text-decoration: none; }
+    a:link { color: #363C3F; font-size: 18px; text-decoration: none; }
     a:visited { color: #363C3F; text-decoration: none; }
-    a:hover { color: #c53932; text-decoration: underline; }
+    a:hover { color: #884548; text-decoration: underline; }
     a:active { color: #363C3F; text-decoration: none; }
-    .menuicon{
-        text-align:right;
-        background-color:#fafafa;
-        color:#363C3F;
-        font-size:15px;
-        font-family:'Noto Sans', sans-serif;
-    }
-    div#myMenuicon{
-        display:none;
-    }
-    .sidenav{
-            width: 0;
-            height: 100%;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            right:0;
-            background-color: #363C3F;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-            text-align:center;
-    }
-    .sidenav a{
-        padding: 10px;
-        margin: 20px;
-        text-decoration: none;
-        font-size: 20px;
-        font-family:'Noto Sans', sans-serif;
-        color: #fafafa;
-        display: block;
-        transition: 0.3s;
-    }
-    .sidenav a:hover{
-        color: #fafafa;
-        font-size:25px;
-    }
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0px;
-        right: 3px;
-        font-size: 20px;
-    }
+ 
     div.content {
         margin-left: 0px;
         padding: 1px 16px;
         height: auto;
     }
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0px;
-        overflow: hidden;
-        background-color: #fafafa;
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-    li {
-        float: left;
-    }
-    li a {
-        position: relative;
-        display: block;
-        color: #fafafa;
-        font-family:'Noto Sans', sans-serif;
-        font-weight:bolder;
-        text-align: center;
-        margin: 15px;
-        padding-bottom: 10px;
-        text-decoration: none;
-    }
-    li a:link { color: #878b8C; font-size: 18px; font-weight:600;  text-decoration: none; }
-    li a:visited { color: #878b8C; text-decoration: none; }
-    li a:hover { color: #363C3F; text-decoration: none; font-size: 18px;}
-    li a:active { color: #878b8C; text-decoration: none; }
-    li a:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        bottom: 0;
-        left: 0;
-        background-color: #363C3F;
-        visibility: hidden;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transition: all 0.3s ease-in-out 0s;
-        transition: all 0.3s ease-in-out 0s;
-    }
-    li a:hover:before {
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-    }
     .active { background-color: #fafafa; }
-    .main { margin-top: 30px; }
-    body{ background-color: #fafafa;}
+    .main { 
+        margin-top: 0px; 
+        background-color: #fafafa;
+        }
+    body{ 
+        padding-top: 0px;
+        top:0;
+        background-color: #fafafa;
+        }
+    #header{
+        position:fixed;
+        padding-top: 0px;
+        top:0;
+        left:0;
+        width:100%;
+        background-color: #fafafa;
+    }
     #container {
         width: 960px;
         margin: 0px auto;
         padding: 0px;
+        top:0;
         background-color: #fafafa;
         transition: margin-left 0.5s;
     }
+    #myNav {
+        position:fixed;
+        background-color: #fafafa;
+        width:100%;
+        top:0;
+    }
     #intro {
-        width: 550px;
-        margin-top:15px;
-        padding: 15px;
+        width: 500px;
+        margin-top:125px;
+        padding-left: 0px;
         float: left;
         background-color:#fafafa;
     }
     #pic {
-        width: 350px;
-        margin-top:35px;
-        padding: 15px;
+        width:250px;
+        margin-top:135px;
+        padding-left: 0px;
+        padding-right: 50px;
         float:left;
         background-color: #fafafa;
     }
-    #research {
-        clear: both;
-        padding: 15px;
-        background-color: #fafafa;
-    }
-    #teaching {
-        clear: both;
-        padding: 15px;
-        background-color: #fafafa;
-    }
     @media screen and ( max-width: 980px ) {
-        div#myMenuicon {
-            display:block
-        }
-        #myTopnav {
-            display:none
-        }
         #container {
           width: auto;
         }
@@ -160,91 +82,72 @@
           width: auto;
         }
         #pic {
-          float: none;
-          width: auto;
+            margin-top:30px;
+            padding-bottom: 30px;
+            width:auto;
         }
       }
-    h1 { color:#363C3F; font-family:'Noto Sans', sans-serif; }
-    h2 { color:#363C3F; font-family:'Noto Sans', sans-serif; }
-    h4 { color:#363C3F; font-family:'Noto Sans', sans-serif; }
+    h1 { color:#363C3F; font-family:'Cormorant Garamond', serif; }
+    h2 { color:#363C3F; font-family:'Cormorant Garamond', serif; }
+    h4 { color:#363C3F; font-family:'Cormorant Garamond', serif; }
     p {
         color:#363C3F;
         line-height:1.5; 
         margin-top: 10px; 
         margin-bottom: 10px;
         width:100%;
-        font-family:'Noto Sans', sans-serif;
+        font-family:'Cormorant Garamond', serif;
         font-weight:lighter;
-        font-size:16px;
+        font-size:18px;
     }
   </style>
 </head>
 
 <body leftmargin="20" topmargin="20">
 
-    <div id="myMenuicon" class="menuicon">
-        <span style="cursor:pointer;" onclick="openNav()"><b> <img src="image/square.png" width="20px"> </b></span>
+    
+    <div id="header">
+        <br>
     </div>
 
-    <div id="mySidenav" class="sidenav" >
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="https://woongchanjeon.com"><b>Home</b></a>
-            <!--a href="research.html"><b>Research</b></a-->
-            <a href="https://woongchanjeon.com/teaching/"><b>Teaching</b></a></li>
-            <!--a href="cv/CV.pdf"><b>CV</b></a-->
-    </div>           
-
     <div id="container">
-        
-        <ul id="myTopnav">
-            <li><a href="https://woongchanjeon.com"><b>Home</b></a></li>
-            <!--li><a href="research.html"><b>Research</b></a></li-->
-            <li><a href="https://woongchanjeon.com/teaching/"><b>Teaching</b></a></li>
-            <!--li><a href="CV.pdf"><b>CV</b></a></li-->
-        </ul>
 
-        <div id="intro">     
-            <h2>Woongchan Jeon</h2>
+        <p id = "myNav" style="line-height: 1">
+            <br><br>
+            <span style="font-size:32px; font-family:'Cormorant Garamond', serif;">W<span style="font-size:25px; font-family:'Cormorant Garamond', serif;">OONGCHAN</span> <span style="font-size:32px; font-family:'Cormorant Garamond', serif;">J</span><span style="font-size:25px; font-family:'Cormorant Garamond', serif;">EON</span> <br>
+            <span style="font-size:12px;"> &nbsp
+                <a href="https://woongchanjeon.com" style="font-size:12px;">HOME</a> &nbsp | &nbsp 
+                <!-- 
+                <a href="cv/CV.pdf" style="font-size:12px;">CV</a> &nbsp | &nbsp 
+                <a href="research.html" style="font-size:12px;">RESEARCH</a> &nbsp | &nbsp 
+                -->
+                <a href="https://woongchanjeon.com/teaching/" style="font-size:12px;">TEACHING</a> 
+                <br><br>
+            </span>
+        </p>
+        
+        <div id="pic" style="text-align:center;"> 
+            <img src="image/profile_suit.png" width="100%">
+        </div>
+
+        <div id="intro"> 
+            <p> Welcome to my academic webpage! I am currently a Ph.D. candidate in the <a href="https://econ.ucsb.edu" style="font-weight:1">Department of Economics at the UC Santa Barbara</a>. My research focuses on designing the optimal environmental policies from macroeconomic perspectives. 
             
-            <br>
+            <br><br>
             
-            <p> Welcome to my academic webpage! I am currently a Ph.D. candidate in the <a href="https://econ.ucsb.edu" style="font-weight:1">Department of Economics at UCSB</a>.
-              My research focuses on designing optimal environmental policies from a macroeconomic perspective. 
-              <!--You can find my <a href="cv/CV.pdf">CV here</a>.--> 
-            
-            <br><br><br>
-            
-            <b>Contact</b> <br> 
+            C<span style="font-size:13px">ONTACT</span> <br>
             2015 North Hall <br>
             University of California, Santa Barbara <br>
             Santa Barbara, CA 93106-9210 <br>
-            <img src="image/email.png" width="140"> 
+            <img src="image/email.png" width="120"> 
             <!--script language="JavaScript">
                 var username = "wjeon";
                 var hostname = "ucsb.edu";
                 var linktext = username + "@" + hostname ;
                 document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
             </script-->
-            </p> <br> 
+            </p> 
         </div>
-
-        <div id="pic"> 
-            <img src="image/profile_suit.png" width="100%">
-            <p style="text-align:center;">
-            <!--img src="image/google_sign.png" onmouseover="this.src='image/google_hover.png'" onmouseout="this.src='image/google_sign.png'" width="20" vspace="10" hspace="10"--> 
-            </p>
-        </div>
-
     </div>
-
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "100%";
-        }
-        
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
 </body>
 </html>
