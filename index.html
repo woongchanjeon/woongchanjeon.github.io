@@ -9,7 +9,9 @@
   <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <style> 
+  <title> Woongchan Jeon, UCSB Economics </title>
+
+  <style> 
     a { color: #000000; text-decoration: none; }
     a:link { color: #000000; font-size: 15px; text-decoration: none; }
     a:visited { color: #000000; text-decoration: none; }
@@ -40,6 +42,12 @@
         background-color: #ffffff;
     }
     
+    #myNav {
+            position:fixed;
+            background-color: #ffffff;
+            width:100%;
+            top:0;
+        }
     @media screen and ( max-width: 534px ) {
         #container {
             width: auto;
@@ -49,13 +57,8 @@
             background-color: #ffffff;
             transition: margin-left 0.5s;
         }
-        #myNav {
-            position:fixed;
-            background-color: #ffffff;
-            width:100%;
-            top:0;
-        }
         #pic {
+            position:fixed;
             width:200px;
             margin-top:155px;
             padding-left: 0px;
@@ -70,7 +73,6 @@
             background-color: #ffffff;
         }
       }
-     
     @media screen and ( min-width: 534px ) {
         #container {
             width: 750px;
@@ -80,13 +82,8 @@
             background-color: #ffffff;
             transition: margin-left 0.5s;
         }
-        #myNav {
-            position:fixed;
-            background-color: #ffffff;
-            width:100%;
-            top:0;
-        }
         #pic {
+            position:fixed;
             width:200px;
             margin-top:135px;
             padding-left: 0px;
@@ -118,25 +115,25 @@
 </head>
 
 <body leftmargin="20" topmargin="20">
-    
-    <script>
-      if (window.DeviceOrientationEvent) {
-        window.addEventListener('orientationchange', function() { location.reload(); }, false);
-      }
-    </script>
-    
+
     <div id="header">
         <br>
     </div>
 
     <div id="container">
-        
+
+        <script>
+            if (window.DeviceOrientationEvent) {
+            window.addEventListener('orientationchange', function() { location.reload(); }, false);
+            }
+        </script>
+    
         <p id = "myNav" style="line-height: 1">
             <br><br>
             <span style="font-size:32px; font-family:'Arial', sans-serif;">Woongchan</span> <span style="font-size:32px; font-family:'Arial', sans-serif;">Jeon</span> <br> <br>
             <span style="font-size:12px;"> &nbsp
                 <a href="https://woongchanjeon.com" style="font-size:12px;">HOME</a> &nbsp | &nbsp 
-                <!--<a href="https://woongchanjeon.com/CV/CV.pdf" style="font-size:12px;">CV</a> &nbsp | &nbsp--> 
+                <!--<a href="https://woongchanjeon.com/CV/CV.pdf" style="font-size:12px;">CV</a> &nbsp | &nbsp -->
                 <a href="https://woongchanjeon.com/research/" style="font-size:12px;">RESEARCH</a> &nbsp | &nbsp 
                 <a href="https://woongchanjeon.com/teaching/" style="font-size:12px;">TEACHING</a> 
                 <br><br>
