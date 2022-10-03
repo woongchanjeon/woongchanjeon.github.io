@@ -40,7 +40,38 @@
         background-color: #ffffff;
     }
     
-    @media screen and ( max-width: 534px ) {
+    @media screen and ( max-width: 534px ) and (orientation: portrait) {
+        #container {
+            width: auto;
+            margin: 0px auto;
+            padding: 0px;
+            top:0;
+            background-color: #ffffff;
+            transition: margin-left 0.5s;
+        }
+        #myNav {
+            position:fixed;
+            background-color: #ffffff;
+            width:100%;
+            top:0;
+        }
+        #pic {
+            width:200px;
+            margin-top:155px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom: 25px; 
+            background-color: #ffffff;
+            
+        }
+        #intro {
+            float: none;
+            width: auto;
+            background-color: #ffffff;
+        }
+      }
+      
+    @media screen and ( max-width: 534px ) and (orientation: landscape) {
         #container {
             width: auto;
             margin: 0px auto;
