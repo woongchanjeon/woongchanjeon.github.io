@@ -1,2 +1,1 @@
-# Woongchan Jeon
-Academic Curriculum Vitae
+# Curriculum Vitae - Updated on November 1, 2022
