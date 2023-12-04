@@ -1,5 +1,2 @@
 # Woongchan Jeon
-Research
-
-* Adaptation
-* MPC
+## Research
