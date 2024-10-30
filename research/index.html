@@ -89,6 +89,29 @@
         font-family:'Arial', sans-serif;
         font-size:15px;
     }
+    ol {
+       list-style-type: decimal;
+       font-size:17px; 
+       color:#3a3a3a; 
+       font-weight:lighter; 
+       font-family:'Lato';
+       padding-left:20px;
+       counter-reset: list;
+    }
+    li {
+        list-style: none;
+        position: relative;
+    }
+    li:before {
+        content: "[" counter(list) "]";
+        counter-increment: list;
+        left: -40px;
+        padding-right: 10px;
+        padding-top: 3px;
+        position: absolute;
+        text-align: right;
+        width: 30px;
+    }
   </style>
 </head>
 
