@@ -1,173 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="google-site-verification" content="W8w3-ywfyPmfK8xtszol74k2UmcH1Z4jjSvN6b3K1zM" />
   <meta name="description" content="Woongchan Jeon Ph.D. in Economics" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Woongchan Jeon, ETH Zürich</title>
 
   <style>
-    :root {
-      --text: #000000;
-      --accent: #1A0CAB;
-      --bg: #ffffff;
-      --maxw: 750px;
+    :root{
+      --text:#111;
+      --accent:#1A0CAB;
+      --bg:#fff;
+      --maxw:750px;
     }
 
-    body {
-      margin: 0;
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Arial', sans-serif;
-      line-height: 1.5;
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      background:var(--bg);
+      font-family:'Arial', sans-serif;
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
 
-    a {
-      color: var(--text);
-      text-decoration: none;
-    }
-    a:hover {
-      color: var(--accent);
-      text-decoration: underline;
+    .container{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:clamp(12px,3vw,24px);
     }
 
-    .container {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: clamp(12px, 3vw, 24px);
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:var(--bg);
+      border-bottom:1px solid #eee;
+      padding:clamp(8px,2.5vw,16px) 0;
     }
+    .header-flex{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .brand{
+      font-size:clamp(24px,4.2vw,32px);
+      font-weight:600;
+      letter-spacing:.2px;
+    }
+    nav{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    nav a{
+      display:inline-block;
+      padding:4px 2px;
+      font-size:13px;
+      text-decoration:none;
+      color:var(--text);
+    }
+    nav a:hover{color:var(--accent); text-decoration:underline;}
 
-    header {
-      position: sticky;
-      top: 0;
-      background-color: var(--bg);
-      padding: clamp(8px, 2vw, 12px) 0;
-      z-index: 10;
-      border-bottom: 1px solid #eee;
-    }
+    main{padding-top:clamp(8px,2vw,16px);}
 
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 0 clamp(12px, 3vw, 24px);
+    h1,h2,h3,h4{
+      margin:0 0 8px;
+      font-weight:600;
+      font-family:'Arial', sans-serif;
     }
+    h1{font-size:clamp(22px,4vw,28px);}
+    h2{font-size:clamp(18px,3.2vw,22px); margin-top:28px;}
+    p{margin:8px 0; font-size:15px; font-family:'Arial', sans-serif;}
 
-    .brand {
-      font-size: clamp(26px, 5vw, 32px);
-      font-weight: bold;
-    }
+    a{color:var(--text);}
+    a:link,a:visited{color:var(--text); text-decoration:none;}
+    a:hover{color:var(--accent); text-decoration:underline;}
+    a:active{color:var(--text);}
 
-    nav a {
-      font-size: 12px;
-      margin: 0 6px;
-    }
+    /* Lists */
+    ul{list-style-type:disc; list-style-position:outside; padding-left:20px; margin:8px 0; color:var(--text);}
+    ul li{color:var(--text);}
+    ol{list-style:decimal; padding-left:20px; margin:8px 0;}
 
-    /* Flex layout for hero section */
-    .hero {
-      display: flex;
-      align-items: flex-start;
-      gap: 24px;
-      flex-wrap: wrap;
-      margin-top: 20px;
+    /* Hero section layout */
+    .hero{
+      display:flex;
+      align-items:flex-start;
+      gap:24px;
+      flex-wrap:wrap;
+      margin-top:20px;
     }
+    #pic img{
+      display:block;
+      width:200px; /* 데스크톱 고정 */
+      height:auto;
+    }
+    #intro{flex:1; min-width:0;}
+    #intro p{font-size:15px; margin:10px 0;}
 
-    #pic img {
-      display: block;
-      width: 200px;
-      height: auto;
-    }
+    .section{margin-top:20px;}
+    .spacer{height:16px;}
 
-    #intro {
-      flex: 1;
-      min-width: 0;
-    }
-
-    #intro p {
-      font-size: 15px;
-      margin: 10px 0;
-    }
-
-    /* List styles */
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      color: var(--text);
-    }
-    ol {
-      list-style: decimal;
-      padding-left: 20px;
-      color: var(--text);
-    }
-
-    @media (max-width: 534px) {
-      .header-inner {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav {
-        margin-top: 8px;
-      }
-      .hero {
-        flex-direction: column;
-        gap: 16px;
-      }
-      #pic img {
-        width: 100%;
-        max-width: 480px;
-      }
+    @media (max-width:534px){
+      nav a{font-size:12px; padding:6px 2px;}
+      p{font-size:14px;}
+      .header-flex{flex-direction:column; align-items:center; gap:6px;}
+      .hero{flex-direction:column; gap:16px;}
+      #pic img{width:100%; max-width:480px;} /* 모바일 화면 맞춤 */
     }
   </style>
 </head>
-
 <body>
   <header>
-    <div class="header-inner">
-      <div class="brand">Woongchan Jeon</div>
-      <nav>
-        <a href="https://woongchanjeon.com">HOME</a> 
-        <a href="https://woongchanjeon.com/cv/WJeon_CV.pdf">CV</a> 
-        <a href="https://woongchanjeon.com/research/">RESEARCH</a> 
+    <div class="container header-flex">
+      <div class="brand" aria-label="Site title">Woongchan Jeon</div>
+      <nav aria-label="Primary">
+        <a href="https://woongchanjeon.com">HOME</a>
+        <a href="https://woongchanjeon.com/cv/WJeon_CV.pdf">CV</a>
+        <a href="https://woongchanjeon.com/research/">RESEARCH</a>
         <a href="https://woongchanjeon.com/teaching/">TEACHING</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div id="pic">
-        <img src="https://woongchanjeon.com/image/wjeon_suit.jpg" alt="Woongchan Jeon portrait">
-      </div>
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div id="pic">
+          <img src="https://woongchanjeon.com/image/wjeon_suit.jpg" alt="Woongchan Jeon portrait">
+        </div>
 
-      <div id="intro">
-        <p style="text-align:justify; text-justify: inter-word;">
-          I am a postdoctoral researcher in the <a href="https://clenec.ethz.ch/">Energy and Climate Economics Group at ETH Zurich</a>.
-          I am an environmental and resource economist interested in using reduced-form econometric methods and quantitative macroeconomic tools to study the impact of climate change on the economy and financial system.
-          You can find my <a href="https://scholar.google.com/citations?user=9yHlePIAAAAJ&hl=en">Google Scholar profile here</a>.
-        </p>
+        <div id="intro">
+          <p style="text-align:justify; text-justify: inter-word;">
+            I am a postdoctoral researcher in the <a href="https://clenec.ethz.ch/">Energy and Climate Economics Group at ETH Zurich</a>.
+            I am an environmental and resource economist interested in using reduced-form econometric methods and quantitative macroeconomic tools to study the impact of climate change on the economy and financial system.
+            You can find my <a href="https://scholar.google.com/citations?user=9yHlePIAAAAJ&hl=en">Google Scholar profile here</a>.
+          </p>
 
-        <p>
-          Zürichbergstrasse 18 <br>
-          ZUE E 3 <br>
-          8092 Zürich Switzerland <br>
-          woongchan.jeon@mtec.ethz.ch <br>
-          +41 44 632 48 78
-        </p>
-      </div>
-    </section>
+          <p>
+            Zürichbergstrasse 18 <br>
+            ZUE E 3 <br>
+            8092 Zürich Switzerland <br>
+            woongchan.jeon@mtec.ethz.ch <br>
+            +41 44 632 48 78
+          </p>
+        </div>
+      </section>
+    </div>
   </main>
 
   <script>
     if (window.DeviceOrientationEvent) {
-      window.addEventListener('orientationchange', function() { location.reload(); }, false);
+      window.addEventListener('orientationchange', function(){ location.reload(); }, false);
     }
   </script>
 </body>
