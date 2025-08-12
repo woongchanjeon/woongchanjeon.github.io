@@ -1,149 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="google-site-verification" content="W8w3-ywfyPmfK8xtszol74k2UmcH1Z4jjSvN6b3K1zM" />
   <meta name="description" content="Woongchan Jeon Ph.D. Candidate in the Department of Economics at the University of California, Santa Barbara" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Woongchan Jeon, UCSB Economics</title>
 
-  <title> Woongchan Jeon, UCSB Economics </title>
+  <style>
+    :root{
+      --text:#111;
+      --accent:#1A0CAB;
+      --bg:#fff;
+      --maxw:750px;
+    }
 
-  <style> 
-    a { color: #000000; text-decoration: none; }
-    a:link { color: #000000; font-size: 15px; text-decoration: none; }
-    a:visited { color: #000000; text-decoration: none; }
-    a:hover { color: #1A0CAB; text-decoration: underline; }
-    a:active { color: #000000; text-decoration: none; }
- 
-    div.content {
-        margin-left: 0px;
-        padding: 1px 16px;
-        height: auto;
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      background:var(--bg);
+      font-family:'Arial', sans-serif;
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    .active { background-color: #ffffff; }
-    .main { 
-        margin-top: 0px; 
-        background-color: #ffffff;
-        }
-    body{ 
-        padding-top: 0px;
-        top:0;
-        background-color: #ffffff;
-        }
-    #header{
-        position:fixed;
-        padding-top: 1px;
-        top:0;
-        left:0;
-        width:100%;
-        background-color: #ffffff;
-        text-align: right;
+
+    .container{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:clamp(12px,3vw,24px);
     }
-    #myNav {
-        background-color: #ffffff;
-        width:100%;
-        top:0;
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:var(--bg);
+      border-bottom:1px solid #eee;
+      padding:clamp(8px,2.5vw,16px) 0;
     }
-    #teaching {
-        width:100%;
-        clear: both;
-        padding: 15px;
-        background-color: #ffffff;
-        
+    .header-flex{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
     }
-    @media screen and ( max-width: 534px ) {
-        #container {
-            width: auto;
-            margin: 0px auto;
-            padding: 0px;
-            top:0;
-            background-color: #ffffff;
-            transition: margin-left 0.5s;
-        }
-      }
-    @media screen and ( min-width: 534px ) {
-        #container {
-            width: 750px;
-            margin: 0px auto;
-            padding: 0px;
-            top:0;
-            background-color: #ffffff;
-            transition: margin-left 0.5s;
-        }
-      }
-    h1 { font-family:'Arial', sans-serif; }
-    h2 { font-family:'Arial', sans-serif; }
-    h4 { font-family:'Arial', sans-serif; }
-    p {
-        
-        line-height:1.5; 
-        margin-top: 10px; 
-        margin-bottom: 10px;
-        width:100%;
-        font-family:'Arial', sans-serif;
-        font-size:15px;
+    .brand{
+      font-size:clamp(24px,4.2vw,32px);
+      font-weight:600;
+      letter-spacing:.2px;
+    }
+    nav{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    nav a{
+      display:inline-block;
+      padding:4px 2px;
+      font-size:13px;
+      text-decoration:none;
+      color:var(--text);
+    }
+    nav a:hover{color:var(--accent); text-decoration:underline;}
+
+    main{padding-top:clamp(8px,2vw,16px);}
+
+    h1,h2,h3,h4{
+      margin:0 0 8px;
+      font-weight:600;
+      font-family:'Arial', sans-serif;
+    }
+    h1{font-size:clamp(22px,4vw,28px);}
+    h2{font-size:clamp(18px,3.2vw,22px); margin-top:28px;}
+    p{margin:8px 0; font-size:15px; font-family:'Arial', sans-serif;}
+
+    a{color:var(--text);}
+    a:link,a:visited{color:var(--text); text-decoration:none;}
+    a:hover{color:var(--accent); text-decoration:underline;}
+    a:active{color:var(--text);}
+
+    /* Lists (일관된 불릿/숫자) */
+    ul{list-style-type:disc; list-style-position:outside; padding-left:20px; margin:8px 0; color:var(--text);}
+    ul li{color:var(--text);}
+    ol{list-style:decimal; padding-left:20px; margin:8px 0;}
+
+    .section{margin-top:20px;}
+    .spacer{height:16px;}
+
+    @media (max-width:480px){
+      nav a{font-size:12px; padding:6px 2px;}
+      p{font-size:14px;}
+      .header-flex{flex-direction:column; align-items:center; gap:6px;}
     }
   </style>
 </head>
 
-<body leftmargin="20" topmargin="20">
-    <script>
-        if (window.DeviceOrientationEvent) {
-          window.addEventListener('orientationchange', function() { location.reload(); }, false);
-        }
-    </script>
-    
-    <div id="container">
-        <div id = "myNav" style="line-height: 1">
-            <br><br>
-            <span style="font-size:32px; font-family:'Arial', sans-serif;">Woongchan</span> <span style="font-size:32px; font-family:'Arial', sans-serif;">Jeon</span> <br> <br>
-            <span style="font-size:12px;"> &nbsp
-                <a href="https://woongchanjeon.com" style="font-size:12px;font-family:'Arial', sans-serif;">HOME</a> &nbsp | &nbsp 
-                <a href="https://woongchanjeon.com/cv/WJeon_CV.pdf" style="font-size:12px;font-family:'Arial', sans-serif;">CV</a> &nbsp | &nbsp
-                <a href="https://woongchanjeon.com/research/" style="font-size:12px;font-family:'Arial', sans-serif;">RESEARCH</a> &nbsp | &nbsp 
-                <a href="https://woongchanjeon.com/teaching/" style="font-size:12px;font-family:'Arial', sans-serif;">TEACHING</a> 
-                <br><br>
-            </span>
-        </div>
-
-        <div id="teaching"> 
-            
-            <p style="font-size:20px"> UCSB Math Camp</p> 
-
-            <p>
-            Instructor : Woongchan Jeon (<a href="https://woongchanjeon.com"><span style="color:#1A0CAB; font-weight:bold">Contact Info</span></a>)<br>
-            </p> <br>
-
-            <p style="font-size:20px">Announcements</p>
-            
-            <p> I taught this class in Summer 2020. </p><br>
-    
-            <p style="font-size:20px">Syllabus</p>
-            
-            <p>You can find the <a href="mc_s20_syllabus.pdf"><span style="color:#1A0CAB; font-weight:bold">syllabus here</span></a>.</p><br>
-    
-            <p style="font-size:20px">Lecture Notes</p>
-            
-            <p>
-                Week 1 - <a href="https://woongchanjeon.com/teaching/math_camp/lecture_note/mc_s20_ln1_linear_algebra.pdf"><span style="color:#1A0CAB; font-weight:bold">Linear Algebra</span></a> <br>
-                Week 2 - <a href="https://woongchanjeon.com/teaching/math_camp/lecture_note/mc_s20_ln2_probability.pdf"><span style="color:#1A0CAB; font-weight:bold">Probability</span></a> <br>
-                Week 3 - <a href="https://woongchanjeon.com/teaching/math_camp/lecture_note/mc_s20_ln3_statistics.pdf"><span style="color:#1A0CAB; font-weight:bold">Statistics</span></a> <br> 
-            </p><br>
-    
-            <p style="font-size:20px">Problem Sets</p>
-            
-            <p>
-            <a href="https://woongchanjeon.com/teaching/math_camp/problem_set/mc_s20_ps1.pdf"><span style="color:#1A0CAB; font-weight:bold">Problem Set 1</span></a> - [<a href="https://woongchanjeon.com/teaching/math_camp/problem_set/mc_s20_ps1_solution.pdf"><span style="color:#1A0CAB; font-weight:bold">Solution</span></a>] <br>
-            <a href="https://woongchanjeon.com/teaching/math_camp/problem_set/mc_s20_ps2.pdf"><span style="color:#1A0CAB; font-weight:bold">Problem Set 2</span></a> - [<a href="https://woongchanjeon.com/teaching/math_camp/problem_set/mc_s20_ps2_solution.pdf"><span style="color:#1A0CAB; font-weight:bold">Solution</span></a>] <br>
-            <a href="https://woongchanjeon.com/teaching/math_camp/problem_set/mc_s20_ps3.pdf"><span style="color:#1A0CAB; font-weight:bold">Problem Set 3</span></a> - [<a href="https://woongchanjeon.com/teaching/math_camp/problem_set/mc_s20_ps3_solution.pdf"><span style="color:#1A0CAB; font-weight:bold">Solution</span></a>] <br>
-            </p><br>
-    
-        </div>
-    
-
+<body>
+  <header>
+    <div class="container header-flex">
+      <div class="brand" aria-label="Site title">Woongchan Jeon</div>
+      <nav aria-label="Primary">
+        <a href="https://woongchanjeon.com">HOME</a>
+        <a href="https://woongchanjeon.com/cv/WJeon_CV.pdf">CV</a>
+        <a href="https://woongchanjeon.com/research/">RESEARCH</a>
+        <a href="https://woongchanjeon.com/teaching/">TEACHING</a>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>UCSB Math Camp</h1>
+
+      <section class="section">
+        <h2>Instructor</h2>
+        <p>
+          Woongchan Jeon (<a href="https://woongchanjeon.com" style="color: var(--accent); font-weight:bold">Contact Info</a>)
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Announcements</h2>
+        <p>I taught this class in Summer 2020.</p>
+      </section>
+
+      <section class="section">
+        <h2>Syllabus</h2>
+        <p>You can find the <a href="mc_s20_syllabus.pdf" style="color:#1A0CAB; font-weight:bold">syllabus here</a>.</p>
+      </section>
+
+      <section class="section">
+        <h2>Lecture Notes</h2>
+        <ul>
+          <li>Week 1 — <a href="https://woongchanjeon.com/teaching/math_camp/lecture_note/mc_s20_ln1_linear_algebra.pdf" style="color:#1A0CAB; font-weight:bold">Linear Algebra</a></li>
+          <li>Week 2 — <a href="https://woongchanjeon.com/teaching/math_camp/lecture_note/mc_s20_ln2_probability.pdf" style="color:#1A0CAB; font-weight:bold">Probability</a></li>
+          <li>Week 3 — <a href="https://woongchanjeon.com/teaching/math_camp/lecture_note/mc_s20_ln3_statistics.pdf" style="color:#1A0CAB; font-weight:bold">Statistics</a></li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Problem Sets</h2>
+        <ul>
+          <li>
+            <a href="https://woongchanjeon.com/teaching/math_camp/problem_set/mc_s20_ps1.pdf" style="color:#1A0CAB; font-weight:bold">Problem Set 1</a>
+            — [<a href="https://woongchanjeon.com/teaching/math_camp/problem_set/mc_s20_ps1_solution.pdf" style="color:#1A0CAB; font-weight:bold">Solution</a>]
+          </li>
+          <li>
+            <a href="https://woongchanjeon.com/teaching/math_camp/problem_set/mc_s20_ps2.pdf" style="color:#1A0CAB; font-weight:bold">Problem Set 2</a>
+            — [<a href="https://woongchanjeon.com/teaching/math_camp/problem_set/mc_s20_ps2_solution.pdf" style="color:#1A0CAB; font-weight:bold">Solution</a>]
+          </li>
+          <li>
+            <a href="https://woongchanjeon.com/teaching/math_camp/problem_set/mc_s20_ps3.pdf" style="color:#1A0CAB; font-weight:bold">Problem Set 3</a>
+            — [<a href="https://woongchanjeon.com/teaching/math_camp/problem_set/mc_s20_ps3_solution.pdf" style="color:#1A0CAB; font-weight:bold">Solution</a>]
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener('orientationchange', function(){ location.reload(); }, false);
+    }
+  </script>
 </body>
 </html>
