@@ -11,94 +11,99 @@
   <title>Woongchan Jeon, ETH Zürich</title>
 
   <style>
-    :root {
-      --text: #111;
-      --muted: #555;
-      --accent: #1A0CAB;
-      --bg: #fff;
-      --maxw: 750px;
+    :root{
+      --text:#111;
+      --accent:#1A0CAB;
+      --bg:#fff;
+      --maxw:750px;
     }
 
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      color: var(--text);
-      background: var(--bg);
-      font-family: 'Arial', sans-serif;
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      background:var(--bg);
+      font-family:'Arial', sans-serif;
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
 
-    .container {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: clamp(12px, 3vw, 24px);
+    .container{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:clamp(12px,3vw,24px);
     }
 
-    header {
-      padding: clamp(8px, 2.5vw, 16px) 0;
-      background: var(--bg);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid #eee;
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:var(--bg);
+      border-bottom:1px solid #eee;
+      padding:clamp(8px,2.5vw,16px) 0;
     }
-
-    .brand {
-      font-size: clamp(24px, 4.2vw, 32px);
-      font-weight: 600;
-      letter-spacing: 0.2px;
+    .header-flex{
+      display:flex;
+      align-items:center;           /* 세로 가운데 정렬 */
+      justify-content:space-between;/* 이름-탭 양 끝 배치 */
+      gap:12px;
+      flex-wrap:wrap;               /* 좁은 화면에서 줄바꿈 */
     }
-
-    nav { margin-top: 6px; }
-    nav a {
-      display: inline-block;
-      margin-right: 12px;
-      padding: 4px 2px;
-      font-size: 13px;
-      text-decoration: none;
-      color: var(--text);
+    .brand{
+      font-size:clamp(24px,4.2vw,32px);
+      font-weight:600;
+      letter-spacing:.2px;
     }
-    nav a:hover { color: var(--accent); text-decoration: underline; }
-
-    main { padding-top: clamp(8px, 2vw, 16px); }
-
-    h1, h2, h3, h4 {
-      margin: 0 0 8px;
-      font-weight: 600;
-      font-family: 'Arial', sans-serif;
+    nav{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
     }
-    h1 { font-size: clamp(22px, 4vw, 28px); }
-    h2 { font-size: clamp(18px, 3.2vw, 22px); margin-top: 28px; }
-    p {
-      margin: 8px 0;
-      font-size: 15px;
-      font-family: 'Arial', sans-serif;
+    nav a{
+      display:inline-block;
+      padding:4px 2px;
+      font-size:13px;
+      text-decoration:none;
+      color:var(--text);
     }
+    nav a:hover{color:var(--accent); text-decoration:underline;}
 
-    a { color: var(--text); }
-    a:link,
-    a:visited { color: var(--text); text-decoration: none; }
-    a:hover { color: var(--accent); text-decoration: underline; }
-    a:active { color: var(--text); }
+    main{padding-top:clamp(8px,2vw,16px);}
 
-    ul { list-style-type: disc; list-style-position: outside; padding-left: 20px; margin: 8px 0; color: var(--text); }
-    ul li { color: var(--text); }
-    ol { list-style: decimal; padding-left: 20px; margin: 8px 0; }
+    h1,h2,h3,h4{
+      margin:0 0 8px;
+      font-weight:600;
+      font-family:'Arial', sans-serif;
+    }
+    h1{font-size:clamp(22px,4vw,28px);}
+    h2{font-size:clamp(18px,3.2vw,22px); margin-top:28px;}
+    p{margin:8px 0; font-size:15px; font-family:'Arial', sans-serif;}
 
-    .section { margin-top: 20px; }
-    .spacer { height: 16px; }
+    a{color:var(--text);}
+    a:link,a:visited{color:var(--text); text-decoration:none;}
+    a:hover{color:var(--accent); text-decoration:underline;}
+    a:active{color:var(--text);}
 
-    @media (max-width: 480px) {
-      nav a { margin-right: 10px; padding: 6px 2px; font-size: 12px; }
-      p { font-size: 14px; }
+    /* Lists: always black bullets/numbers */
+    ul{list-style-type:disc; list-style-position:outside; padding-left:20px; margin:8px 0; color:var(--text);}
+    ul li{color:var(--text);}
+    ol{list-style:decimal; padding-left:20px; margin:8px 0;}
+
+    .section{margin-top:20px;}
+    .spacer{height:16px;}
+
+    @media (max-width:480px){
+      nav a{font-size:12px; padding:6px 2px;}
+      p{font-size:14px;}
+      .header-flex{flex-direction:column; align-items:center; gap:6px;} /* 모바일: 중앙 정렬로 쌓임 */
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
+    <div class="container header-flex">
       <div class="brand" aria-label="Site title">Woongchan Jeon</div>
       <nav aria-label="Primary">
         <a href="https://woongchanjeon.com">HOME</a>
@@ -157,7 +162,7 @@
 
   <script>
     if (window.DeviceOrientationEvent) {
-      window.addEventListener('orientationchange', function () { location.reload(); }, false);
+      window.addEventListener('orientationchange', function(){ location.reload(); }, false);
     }
   </script>
 </body>
