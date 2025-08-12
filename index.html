@@ -9,151 +9,166 @@
   <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title> Woongchan Jeon, ETH Z&uuml;rich </title>
+  <title>Woongchan Jeon, ETH Zürich</title>
 
-  <style> 
-    a { color: #000000; text-decoration: none; }
-    a:link { color: #000000; font-size: 15px; text-decoration: none; }
-    a:visited { color: #000000; text-decoration: none; }
-    a:hover { color: #1A0CAB; text-decoration: underline; }
-    a:active { color: #000000; text-decoration: none; }
- 
-    div.content {
-        margin-left: 0px;
-        padding: 1px 16px;
-        height: auto;
+  <style>
+    :root {
+      --text: #000000;
+      --accent: #1A0CAB;
+      --bg: #ffffff;
+      --maxw: 750px;
     }
-    .active { background-color: #ffffff; }
-    .main { 
-        margin-top: 0px; 
-        background-color: #ffffff;
-        }
-    body{ 
-        padding-top: 0px;
-        top:0;
-        background-color: #ffffff;
-        }
-    #header{
-        position:fixed;
-        padding-top: 0px;
-        top:0;
-        left:0;
-        width:100%;
-        background-color: #ffffff;
-        text-align: right;
+
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Arial', sans-serif;
+      line-height: 1.5;
     }
-    
-    #myNav {
-            background-color: #ffffff;
-            width:100%;
-            top:0;
-        }
-    @media screen and ( max-width: 534px ) {
-        #container {
-            width: auto;
-            margin: 0px auto;
-            padding: 0px;
-            top:0;
-            background-color: #ffffff;
-            transition: margin-left 0.5s;
-        }
-        #pic {
-            width:200px;
-            margin-top:25px;
-            padding-left: 0px;
-            padding-right: 0px;
-            padding-bottom: 25px; 
-            background-color: #ffffff;
-            
-        }
-        #intro {
-            float: none;
-            width: auto;
-            background-color: #ffffff;
-        }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: clamp(12px, 3vw, 24px);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: var(--bg);
+      padding: clamp(8px, 2vw, 12px) 0;
+      z-index: 10;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 clamp(12px, 3vw, 24px);
+    }
+
+    .brand {
+      font-size: clamp(26px, 5vw, 32px);
+      font-weight: bold;
+    }
+
+    nav a {
+      font-size: 12px;
+      margin: 0 6px;
+    }
+
+    /* Flex layout for hero section */
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    #pic img {
+      display: block;
+      width: 200px;
+      height: auto;
+    }
+
+    #intro {
+      flex: 1;
+      min-width: 0;
+    }
+
+    #intro p {
+      font-size: 15px;
+      margin: 10px 0;
+    }
+
+    /* List styles */
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: var(--text);
+    }
+    ol {
+      list-style: decimal;
+      padding-left: 20px;
+      color: var(--text);
+    }
+
+    @media (max-width: 534px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: center;
       }
-    @media screen and ( min-width: 534px ) {
-        #container {
-            width: 750px;
-            margin: 0px auto;
-            padding: 0px;
-            top:0;
-            background-color: #ffffff;
-            transition: margin-left 0.5s;
-        }
-        #pic {
-            width:200px;
-            margin-top:25px;
-            padding-left: 0px;
-            padding-right: 50px;
-            float:left;
-            background-color: #ffffff;
-        }
-        #intro {
-            width: 400px;
-            margin-top:15px;
-            padding-left: 0px;
-            float: left;
-            background-color: #ffffff;
-        }
+      nav {
+        margin-top: 8px;
       }
-    h1 { font-family:'Arial', sans-serif; }
-    h2 { font-family:'Arial', sans-serif; }
-    h4 { font-family:'Arial', sans-serif; }
-    p {
-        
-        line-height:1.5; 
-        margin-top: 10px; 
-        margin-bottom: 10px;
-        width:100%;
-        font-family:'Arial', sans-serif;
-        font-size:15px;
+      .hero {
+        flex-direction: column;
+        gap: 16px;
+      }
+      #pic img {
+        width: 100%;
+        max-width: 480px;
+      }
     }
   </style>
 </head>
 
-<body leftmargin="20" topmargin="20">
-
-    <div id="container">
-
-        <script>
-            if (window.DeviceOrientationEvent) {
-            window.addEventListener('orientationchange', function() { location.reload(); }, false);
-            }
-        </script>
-    
-        <div id = "myNav" style="line-height: 1">
-            <br><br>
-            <span style="font-size:32px; font-family:'Arial', sans-serif;">Woongchan</span> <span style="font-size:32px; font-family:'Arial', sans-serif;">Jeon</span> <br> <br>
-            <span style="font-size:12px;"> &nbsp
-                <a href="https://woongchanjeon.com" style="font-size:12px;font-family:'Arial', sans-serif;">HOME</a> &nbsp | &nbsp 
-                <a href="https://woongchanjeon.com/cv/WJeon_CV.pdf" style="font-size:12px;font-family:'Arial', sans-serif;">CV</a> &nbsp | &nbsp
-                <a href="https://woongchanjeon.com/research/" style="font-size:12px;font-family:'Arial', sans-serif;">RESEARCH</a> &nbsp | &nbsp 
-                <a href="https://woongchanjeon.com/teaching/" style="font-size:12px;font-family:'Arial', sans-serif;">TEACHING</a> 
-                <br><br>
-            </span>
-        </div>
-        
-        <div id="pic" style="text-align:center;"> 
-            <img src="https://woongchanjeon.com/image/wjeon_suit.jpg" width="100%">
-        </div>
-
-        <div id="intro"> 
-          <p style="text-align:justify; text-justify: inter-word;"> I am a postdoctoral researcher in the  <a href="https://clenec.ethz.ch/">Energy and Climate Economics Group at ETH Zurich</a>. 
-            I am an environmental and resource economist interested in using reduced-form econometric methods and quantitative macroeconomic tools to study the impact of climate change on the economy and financial system. 
-            You can find my <a href="https://scholar.google.com/citations?user=9yHlePIAAAAJ&hl=en">Google Scholar profile here</a>.
-          </p> 
-
-          <br>
-            
-          <p> 
-            Z&uuml;richbergstrasse 18 <br>
-            ZUE E 3 <br>
-            8092 Z&uuml;rich Switzerland <br>
-            woongchan.jeon@mtec.ethz.ch <br>
-            +41 44 632 48 78
-          </p>
-        </div>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">Woongchan Jeon</div>
+      <nav>
+        <a href="https://woongchanjeon.com">HOME</a> 
+        <a href="https://woongchanjeon.com/cv/WJeon_CV.pdf">CV</a> 
+        <a href="https://woongchanjeon.com/research/">RESEARCH</a> 
+        <a href="https://woongchanjeon.com/teaching/">TEACHING</a>
+      </nav>
     </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div id="pic">
+        <img src="https://woongchanjeon.com/image/wjeon_suit.jpg" alt="Woongchan Jeon portrait">
+      </div>
+
+      <div id="intro">
+        <p style="text-align:justify; text-justify: inter-word;">
+          I am a postdoctoral researcher in the <a href="https://clenec.ethz.ch/">Energy and Climate Economics Group at ETH Zurich</a>.
+          I am an environmental and resource economist interested in using reduced-form econometric methods and quantitative macroeconomic tools to study the impact of climate change on the economy and financial system.
+          You can find my <a href="https://scholar.google.com/citations?user=9yHlePIAAAAJ&hl=en">Google Scholar profile here</a>.
+        </p>
+
+        <p>
+          Zürichbergstrasse 18 <br>
+          ZUE E 3 <br>
+          8092 Zürich Switzerland <br>
+          woongchan.jeon@mtec.ethz.ch <br>
+          +41 44 632 48 78
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener('orientationchange', function() { location.reload(); }, false);
+    }
+  </script>
 </body>
 </html>
