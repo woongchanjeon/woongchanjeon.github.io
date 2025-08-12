@@ -1,211 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="google-site-verification" content="W8w3-ywfyPmfK8xtszol74k2UmcH1Z4jjSvN6b3K1zM" />
   <meta name="description" content="Woongchan Jeon Ph.D. in Economics" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Woongchan Jeon, ETH Zürich</title>
 
-  <title> Woongchan Jeon, ETH Z&uuml;rich </title>
-
-  <style> 
-    a { color: #000000; text-decoration: none; }
-    a:link { color: #000000; font-size: 15px; text-decoration: none; }
-    a:visited { color: #000000; text-decoration: none; }
-    a:hover { color: #1A0CAB; text-decoration: underline; }
-    a:active { color: #000000; text-decoration: none; }
- 
-    div.content {
-        margin-left: 0px;
-        padding: 1px 16px;
-        height: auto;
-    }
-    .active { background-color: #ffffff; }
-    .main { 
-        margin-top: 0px; 
-        background-color: #ffffff;
-        }
-    body{ 
-        padding-top: 0px;
-        top:0;
-        background-color: #ffffff;
-        }
-    #header{
-        position:fixed;
-        padding-top: 0px;
-        top:0;
-        left:0;
-        width:100%;
-        background-color: #ffffff;
-        text-align: right;
-    }
-    
-    #myNav {
-            background-color: #ffffff;
-            
-            width:100%;
-            top:0;
-        }
-    #research {
-        width:100%;
-        clear: both;
-        padding: 15px;
-        background-color: #ffffff;
-
+  <style>
+    :root {
+      --text: #111;
+      --muted: #555;
+      --accent: #1A0CAB;
+      --bg: #fff;
+      --maxw: 750px;
     }
 
-    @media screen and ( max-width: 534px ) {
-        #container {
-            width: auto;
-            margin: 0px auto;
-            padding: 0px;
-            top:0;
-            background-color: #ffffff;
-            transition: margin-left 0.5s;
-        }
-      }
-    @media screen and ( min-width: 534px ) {
-        #container {
-            width: 750px;
-            margin: 0px auto;
-            padding: 0px;
-            top:0;
-            background-color: #ffffff;
-            transition: margin-left 0.5s;
-        }
-      }
-    h1 { font-family:'Arial', sans-serif; }
-    h2 { font-family:'Arial', sans-serif; }
-    h4 { font-family:'Arial', sans-serif; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: 'Arial', sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: clamp(12px, 3vw, 24px);
+    }
+
+    header {
+      padding: clamp(8px, 2.5vw, 16px) 0;
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #eee;
+    }
+
+    .brand {
+      font-size: clamp(24px, 4.2vw, 32px);
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    nav { margin-top: 6px; }
+    nav a {
+      display: inline-block;
+      margin-right: 12px;
+      padding: 4px 2px;
+      font-size: 13px;
+      text-decoration: none;
+      color: var(--text);
+    }
+    nav a:hover { color: var(--accent); text-decoration: underline; }
+
+    main { padding-top: clamp(8px, 2vw, 16px); }
+
+    h1, h2, h3, h4 {
+      margin: 0 0 8px;
+      font-weight: 600;
+      font-family: 'Arial', sans-serif;
+    }
+    h1 { font-size: clamp(22px, 4vw, 28px); }
+    h2 { font-size: clamp(18px, 3.2vw, 22px); margin-top: 28px; }
     p {
-        
-        line-height:1.5; 
-        margin-top: 10px; 
-        margin-bottom: 10px;
-        width:100%;
-        font-family:'Arial', sans-serif;
-        font-size:15px;
+      margin: 8px 0;
+      font-size: 15px;
+      font-family: 'Arial', sans-serif;
     }
-    ol {
-        list-style-type:decimal;
-        font-weight:lighter; 
-        font-family:'Arial', sans-serif;
-        font-size:15px;
-        counter-reset:list;
-    }
-    li {
-        list-style: none;
-        position: relative;
-    }
-    li:before {
-        content: "[" counter(list) "]";
-        counter-increment:list;
-        left:-40px;
-        padding-right:10px;
-        padding-top:2.5px;
-        position:absolute;
-        text-align:right;
-        width:30px;
+
+    a { color: var(--text); }
+    a:link,
+    a:visited { color: var(--text); text-decoration: none; }
+    a:hover { color: var(--accent); text-decoration: underline; }
+    a:active { color: var(--text); }
+
+    ul { list-style-type: disc; list-style-position: outside; padding-left: 20px; margin: 8px 0; color: var(--text); }
+    ul li { color: var(--text); }
+    ol { list-style: decimal; padding-left: 20px; margin: 8px 0; }
+
+    .section { margin-top: 20px; }
+    .spacer { height: 16px; }
+
+    @media (max-width: 480px) {
+      nav a { margin-right: 10px; padding: 6px 2px; font-size: 12px; }
+      p { font-size: 14px; }
     }
   </style>
 </head>
-
-<body leftmargin="20" topmargin="20">
-    <script>
-        if (window.DeviceOrientationEvent) {
-          window.addEventListener('orientationchange', function() { location.reload(); }, false);
-        }
-    </script>
-    
-    <div id="container">
-      
-        <div id = "myNav" style="line-height: 1">
-            <br><br>
-            <span style="font-size:32px; font-family:'Arial', sans-serif;">Woongchan</span> <span style="font-size:32px; font-family:'Arial', sans-serif;">Jeon</span> <br> <br>
-            <span style="font-size:12px;"> &nbsp
-                <a href="https://woongchanjeon.com" style="font-size:12px;font-family:'Arial', sans-serif;">HOME</a> &nbsp | &nbsp 
-                <a href="https://woongchanjeon.com/cv/WJeon_CV.pdf" style="font-size:12px;font-family:'Arial', sans-serif;">CV</a> &nbsp | &nbsp
-                <a href="https://woongchanjeon.com/research/" style="font-size:12px;font-family:'Arial', sans-serif;">RESEARCH</a> &nbsp | &nbsp 
-                <a href="https://woongchanjeon.com/teaching/" style="font-size:12px;font-family:'Arial', sans-serif;">TEACHING</a> 
-                <br><br>
-            </span>
-        </div>
-
-        <div id="research"> 
-
-            <p style="text-align:left;"><span style="font-size:25px;">Research</span></p>
-            
-            <br>
-
-            <p><span style="font-size:18px;">Publications</span></p> 
-              
-                <p> Jeon, Woongchan and <a href="https://sites.google.com/site/kieranjameswalsh/">Kieran James Walsh.</a>
-                    <a href="https://doi.org/10.1016/j.econlet.2024.112117">
-                      <span style="font-weight:bold">"Heterogeneity and Macroeconomic State Dependence in the Spending Response to Stimulus."</span> 
-                      <i>Economics Letters</i> 247 (2025): 112117.</a>
-                </p>
-            
-            
-            <br> <br> <br>
-          
-            <p><span style="font-size:18px;">Working Papers</span></p> 
-              
-                <p> Jeon, Woongchan, <a href="https://www.lintbarrage.com/">Lint Barrage</a>, and <a href="https://sites.google.com/site/kieranjameswalsh/">Kieran James Walsh</a> (2025). 
-                  <span style="font-weight:bold">Pricing Climate Risks: Evidence from Wildfires and Municipal Bonds</span> 
-                  [<a href="https://ethz.ch/content/dam/ethz/special-interest/mtec/cer-eth/cer-eth-dam/documents/working-papers/wp-25-398.pdf"><span style="color:#1A0CAB">CER-ETH Working Papers No. 25-398</span></a>] <br>
-                  <i>Revisions Requested at <u>Journal of Public Economics</u></i> <br>
-                  &#9702; Summary: <a href="https://woongchanjeon.com/research/project/CEPE_Policy_Brief_Wildfires_BondSpreads.pdf"><span style="color:#1A0CAB">ETH Zurich Center for Energy Policy and Economics Policy Brief</span></a> <br>
-                  &#9702; Media and Blogs: <a href="https://www.brookings.edu/articles/measuring-the-impact-of-climate-change-on-state-and-local-governments-fiscal-health/?b=1"><span style="color:#1A0CAB">Brookings</span></a>, 
-                  <a href="https://www.riskmarketnews.com/wildfire-risk-may-fuel-viscous-cycle-in-municipal-bond-market/"><span style="color:#1A0CAB">Risk Market News</span></a>,
-                  <a href="https://www.bondbuyer.com/news/wildfire-risks-are-reflected-in-muni-borrowing-costs-study-shows"><span style="color:#1A0CAB">The Bond Buyer</span></a>
-                </p>
-                <br>
-                <p><a href="https://sites.google.com/site/gregorypcasey/">Casey, Gregory</a>, Woongchan Jeon, and <a href="https://traeger.eu/">Christian Traeger</a> (2025).
-                    <span style="font-weight:bold">The Macroeconomics of Clean Energy Subsidies</span> 
-                    [<a href="https://www.ifo.de/en/cesifo/publications/2025/working-paper/macroeconomics-clean-energy-subsidies"><span style="color:#1A0CAB">CESifo Working Paper No. 10828</span></a>] <br>
-                    <i>Revised and Resubmitted at <u>Journal of Environmental Economics and Management</u></i> <br>
-                    &#9702; Policy: <a href="https://woongchanjeon.com/research/project/2024_ERP.pdf"><span style="color:#1A0CAB">The 2024 Economic Report of the President</span></a> 
-                </p>
-                <br>
-                <p> Jeon, Woongchan (2023).
-                  <span style="font-weight:bold">Pricing Externalities in the Presence of Adaptation</span> 
-                  [<a href="https://woongchanjeon.com/research/project/Jeon_Adaptation_2023.pdf"><span style="color:#1A0CAB">PDF</span></a>]
-                </p>
-              
-    
-            <br> <br> <br>
-
-            <p><span style="font-size:18px;">Works in Progress</span></p> 
-            
-                <p>Jeon, Woongchan (2023). <span style="font-weight:bold">Credit Ratings and the Cost of Wildfires: Evidence from California School District Finances</span></p>    
-              
-          
-            <br> <br> <br>
-
-            <p><span style="font-size:18px;">Pre-doctoral Publications</span></p> 
-            
-                <p>Jeon, Woongchan and <a href="http://kimklab.snu.ac.kr/">Kwansoo Kim</a>. <a href="http://dx.doi.org/10.24997/KJAE.2018.59.2.1">
-                    <span style="font-weight:bold">"An Analysis on Production Efficiency of Korean Rice Farms: A Zero Inefficiency Stochastic Frontier Approach."</span> 
-                    <i>The Korean Journal of Agricultural Economics</i> 59, no. 2 (2018): 1-16.</a>
-                </p>
-                <br>
-                <p>Jeon, Woongchan and <a href="http://kimklab.snu.ac.kr/">Kwansoo Kim</a>. <a href="http://dx.doi.org/10.24997/KJAE.2017.58.2.49">
-                    <span style="font-weight:bold">"Estimating the Causal Effects of Fostering Programs for Future Farmers in Crop Production."</span>.
-                    <i>The Korean Journal of Agricultural Economics</i> 58, no. 2 (2017): 49-68.</a>
-                </p>
-                <br>
-                <p>Jeon, Woongchan and <a href="http://kimklab.snu.ac.kr/">Kwansoo Kim</a>. <a href="https://doi.org/10.3390/su9060956">
-                    <span style="font-weight:bold">"Optimal Weed Control Strategies in Rice Production under Dynamic and Static Decision Rules in South Korea."</span>
-                    <i>Sustainability</i> 9, no. 6 (2017): 956.</a>
-                </p>
-              
-            
-  
-        </div>
-
+<body>
+  <header>
+    <div class="container">
+      <div class="brand" aria-label="Site title">Woongchan Jeon</div>
+      <nav aria-label="Primary">
+        <a href="https://woongchanjeon.com">HOME</a>
+        <a href="https://woongchanjeon.com/cv/WJeon_CV.pdf">CV</a>
+        <a href="https://woongchanjeon.com/research/">RESEARCH</a>
+        <a href="https://woongchanjeon.com/teaching/">TEACHING</a>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Research</h1>
+
+      <section class="section" id="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li>
+            <p>Jeon, Woongchan and <a href="https://sites.google.com/site/kieranjameswalsh/">Kieran James Walsh</a>. <a href="https://doi.org/10.1016/j.econlet.2024.112117"><span style="font-weight:700;">“Heterogeneity and Macroeconomic State Dependence in the Spending Response to Stimulus.”</span> <i>Economics Letters</i> 247 (2025): 112117.</a></p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="working-papers">
+        <h2>Working Papers</h2>
+        <ul>
+          <li>
+            <p>Jeon, Woongchan, <a href="https://www.lintbarrage.com/">Lint Barrage</a>, and <a href="https://sites.google.com/site/kieranjameswalsh/">Kieran James Walsh</a> (2025). <span style="font-weight:700;">Pricing Climate Risks: Evidence from Wildfires and Municipal Bonds</span> [<a href="https://ethz.ch/content/dam/ethz/special-interest/mtec/cer-eth/cer-eth-dam/documents/working-papers/wp-25-398.pdf" style="color: var(--accent);">CER-ETH Working Papers No. 25-398</a>]<br/> <i>Revisions Requested at <u>Journal of Public Economics</u></i><br/> &#9702; Summary: <a href="https://woongchanjeon.com/research/project/CEPE_Policy_Brief_Wildfires_BondSpreads.pdf" style="color: var(--accent);">ETH Zurich Center for Energy Policy and Economics Policy Brief</a><br/> &#9702; Media and Blogs: <a href="https://www.brookings.edu/articles/measuring-the-impact-of-climate-change-on-state-and-local-governments-fiscal-health/?b=1" style="color: var(--accent);">Brookings</a>, <a href="https://www.riskmarketnews.com/wildfire-risk-may-fuel-viscous-cycle-in-municipal-bond-market/" style="color: var(--accent);">Risk Market News</a>, <a href="https://www.bondbuyer.com/news/wildfire-risks-are-reflected-in-muni-borrowing-costs-study-shows" style="color: var(--accent);">The Bond Buyer</a></p>
+          </li>
+          <li>
+            <p><a href="https://sites.google.com/site/gregorypcasey/">Casey, Gregory</a>, Woongchan Jeon, and <a href="https://traeger.eu/">Christian Traeger</a> (2025). <span style="font-weight:700;">The Macroeconomics of Clean Energy Subsidies</span> [<a href="https://www.ifo.de/en/cesifo/publications/2025/working-paper/macroeconomics-clean-energy-subsidies" style="color: var(--accent);">CESifo Working Paper No. 10828</a>]<br/> <i>Revised and Resubmitted at <u>Journal of Environmental Economics and Management</u></i><br/> &#9702; Policy: <a href="https://woongchanjeon.com/research/project/2024_ERP.pdf" style="color: var(--accent);">The 2024 Economic Report of the President</a></p>
+          </li>
+          <li>
+            <p>Jeon, Woongchan (2023). <span style="font-weight:700;">Pricing Externalities in the Presence of Adaptation</span> [<a href="https://woongchanjeon.com/research/project/Jeon_Adaptation_2023.pdf" style="color: var(--accent);">PDF</a>]</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="wip">
+        <h2>Works in Progress</h2>
+        <ul>
+          <li><p>Jeon, Woongchan (2023). <span style="font-weight:700;">Credit Ratings and the Cost of Wildfires: Evidence from California School District Finances</span></p></li>
+        </ul>
+      </section>
+
+      <section class="section" id="pre-doc">
+        <h2>Pre-doctoral Publications</h2>
+        <ul>
+          <li><p>Jeon, Woongchan and <a href="http://kimklab.snu.ac.kr/">Kwansoo Kim</a>. <a href="http://dx.doi.org/10.24997/KJAE.2018.59.2.1"><span style="font-weight:700;">“An Analysis on Production Efficiency of Korean Rice Farms: A Zero Inefficiency Stochastic Frontier Approach.”</span> <i>The Korean Journal of Agricultural Economics</i> 59, no. 2 (2018): 1-16.</a></p></li>
+          <li><p>Jeon, Woongchan and <a href="http://kimklab.snu.ac.kr/">Kwansoo Kim</a>. <a href="http://dx.doi.org/10.24997/KJAE.2017.58.2.49"><span style="font-weight:700;">“Estimating the Causal Effects of Fostering Programs for Future Farmers in Crop Production.”</span> <i>The Korean Journal of Agricultural Economics</i> 58, no. 2 (2017): 49-68.</a></p></li>
+          <li><p>Jeon, Woongchan and <a href="https://doi.org/10.3390/su9060956">Kwansoo Kim</a>. <a href="https://doi.org/10.3390/su9060956"><span style="font-weight:700;">“Optimal Weed Control Strategies in Rice Production under Dynamic and Static Decision Rules in South Korea.”</span> <i>Sustainability</i> 9, no. 6 (2017): 956.</a></p></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener('orientationchange', function () { location.reload(); }, false);
+    }
+  </script>
 </body>
 </html>
