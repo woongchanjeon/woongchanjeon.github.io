@@ -1,152 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="google-site-verification" content="W8w3-ywfyPmfK8xtszol74k2UmcH1Z4jjSvN6b3K1zM" />
   <meta name="description" content="Woongchan Jeon Ph.D. in Economics" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Woongchan Jeon, UCSB Economics</title>
 
-  <title> Woongchan Jeon, UCSB Economics </title>
+  <style>
+    :root{
+      --text:#111;
+      --accent:#1A0CAB;
+      --bg:#fff;
+      --maxw:750px;
+    }
 
-  <style> 
-    a { color: #000000; text-decoration: none; }
-    a:link { color: #000000; font-size: 15px; text-decoration: none; }
-    a:visited { color: #000000; text-decoration: none; }
-    a:hover { color: #1A0CAB; text-decoration: underline; }
-    a:active { color: #000000; text-decoration: none; }
- 
-    div.content {
-        margin-left: 0px;
-        padding: 1px 16px;
-        height: auto;
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      background:var(--bg);
+      font-family:'Arial', sans-serif;
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    .active { background-color: #ffffff; }
-    .main { 
-        margin-top: 0px; 
-        background-color: #ffffff;
-        }
-    body{ 
-        padding-top: 0px;
-        top:0;
-        background-color: #ffffff;
-        }
-    #header{
-        position:fixed;
-        padding-top: 1px;
-        top:0;
-        left:0;
-        width:100%;
-        background-color: #ffffff;
-        text-align: right;
+
+    .container{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:clamp(12px,3vw,24px);
     }
-    #myNav {
-        background-color: #ffffff;
-        width:100%;
-        top:0;
+
+    /* Header (standard) */
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:var(--bg);
+      border-bottom:1px solid #eee;
+      padding:clamp(8px,2.5vw,16px) 0;
     }
-    #teaching {
-        width:100%;
-        clear: both;
-        padding: 15px;
-        background-color: #ffffff;
-        
+    .header-flex{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
     }
-    @media screen and ( max-width: 534px ) {
-        #container {
-            width: auto;
-            margin: 0px auto;
-            padding: 0px;
-            top:0;
-            background-color: #ffffff;
-            transition: margin-left 0.5s;
-        }
-      }
-    @media screen and ( min-width: 534px ) {
-        #container {
-            width: 750px;
-            margin: 0px auto;
-            padding: 0px;
-            top:0;
-            background-color: #ffffff;
-            transition: margin-left 0.5s;
-        }
-      }
-    h1 { font-family:'Arial', sans-serif; }
-    h2 { font-family:'Arial', sans-serif; }
-    h4 { font-family:'Arial', sans-serif; }
-    p {
-        
-        line-height:1.5; 
-        margin-top: 10px; 
-        margin-bottom: 10px;
-        width:100%;
-        font-family:'Arial', sans-serif;
-        font-size:15px;
+    .brand{
+      font-size:clamp(24px,4.2vw,32px);
+      font-weight:600;
+      letter-spacing:.2px;
+    }
+    nav{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    nav a{
+      display:inline-block;
+      padding:4px 2px;
+      font-size:13px;
+      text-decoration:none;
+      color:var(--text);
+    }
+    nav a:hover{color:var(--accent); text-decoration:underline;}
+
+    main{padding-top:clamp(8px,2vw,16px);}
+
+    h1,h2,h3,h4{
+      margin:0 0 8px;
+      font-weight:600;
+      font-family:'Arial', sans-serif;
+    }
+    h1{font-size:clamp(22px,4vw,28px);}
+    h2{font-size:clamp(18px,3.2vw,22px); margin-top:28px;}
+    p{margin:8px 0; font-size:15px; font-family:'Arial', sans-serif;}
+
+    a{color:var(--text);}
+    a:link,a:visited{color:var(--text); text-decoration:none;}
+    a:hover{color:var(--accent); text-decoration:underline;}
+    a:active{color:var(--text);}
+
+    /* Lists: black bullets/numbers */
+    ul{list-style-type:disc; list-style-position:outside; padding-left:20px; margin:8px 0; color:var(--text);}
+    ul li{color:var(--text);}
+    ol{list-style:decimal; padding-left:20px; margin:8px 0;}
+
+    .section{margin-top:20px;}
+
+    @media (max-width:480px){
+      nav a{font-size:12px; padding:6px 2px;}
+      p{font-size:14px;}
+      .header-flex{flex-direction:column; align-items:center; gap:6px;}
     }
   </style>
 </head>
 
-<body leftmargin="20" topmargin="20">
-    <script>
-        if (window.DeviceOrientationEvent) {
-          window.addEventListener('orientationchange', function() { location.reload(); }, false);
-        }
-    </script>
-    
-    <div id="container">
-
-        <div id = "myNav" style="line-height: 1">
-            <br><br>
-            <span style="font-size:32px; font-family:'Arial', sans-serif;">Woongchan</span> <span style="font-size:32px; font-family:'Arial', sans-serif;">Jeon</span> <br> <br>
-            <span style="font-size:12px;"> &nbsp
-                <a href="https://woongchanjeon.com" style="font-size:12px;font-family:'Arial', sans-serif;">HOME</a> &nbsp | &nbsp 
-                <a href="https://woongchanjeon.com/cv/WJeon_CV.pdf" style="font-size:12px;font-family:'Arial', sans-serif;">CV</a> &nbsp | &nbsp
-                <a href="https://woongchanjeon.com/research/" style="font-size:12px;font-family:'Arial', sans-serif;">RESEARCH</a> &nbsp | &nbsp 
-                <a href="https://woongchanjeon.com/teaching/" style="font-size:12px;font-family:'Arial', sans-serif;">TEACHING</a> 
-                <br><br>
-            </span>
-        </div>
-
-        <div id="teaching">
-            <p style="font-size:20px">Macroeconomic Modeling of Climate Change</p> 
-
-          
-            <p>
-            Instructor: Woongchan Jeon (<a href="https://woongchanjeon.com"><span style="color:#1A0CAB; font-weight:bold">Contact Info</span></a>)<br>
-            </p> <br>
-    
-            <p style="font-size:20px">Announcements</p>
-            
-            <p> I will be co-teaching this class with Dr. Maria Alsina-Pujols in Spring 2025. </p><br>
-  
-            <p style="font-size:20px">Section Notes</p>
-            
-            <!--
-            <p>
-                Week 1 - <a href="https://woongchanjeon.com/teaching/363_1190_00L/lecture_note/363_1190_00L_S25_W1.pdf"> <span style="color:#1A0CAB; font-weight:bold"> A Closed-Economy One-Period Macroeconomic Model I </span> </a> <br>
-            </p>
-            <p>
-                Week 2 - <a href="https://woongchanjeon.com/teaching/363_1190_00L/lecture_note/363_1190_00L_S25_W2.pdf"> <span style="color:#1A0CAB; font-weight:bold"> A Closed-Economy One-Period Macroeconomic Model II </span> </a> <br>
-            </p>
-            <p>
-                Week 3 - <a href="https://woongchanjeon.com/teaching/363_1190_00L/lecture_note/363_1190_00L_S25_W3.pdf"> <span style="color:#1A0CAB; font-weight:bold"> A Climate-Economy Model I </span> </a> <br>
-            </p>
-            <p>
-                Week 4 - <a href="https://woongchanjeon.com/teaching/363_1190_00L/lecture_note/363_1190_00L_S25_W4.pdf"> <span style="color:#1A0CAB; font-weight:bold"> A Climate-Economy Model II </span> </a> <br>
-            </p>
-            <p>
-                Week 5 - <a href="https://woongchanjeon.com/teaching/363_1190_00L/lecture_note/363_1190_00L_S25_W5.pdf"> <span style="color:#1A0CAB; font-weight:bold"> Estimating Climate Impacts </span> </a> <br>
-            </p>
-            -->
-          
-            <br>
-    
-        </div>
-    
-
+<body>
+  <header>
+    <div class="container header-flex">
+      <div class="brand" aria-label="Site title">Woongchan Jeon</div>
+      <nav aria-label="Primary">
+        <a href="https://woongchanjeon.com">HOME</a>
+        <a href="https://woongchanjeon.com/cv/WJeon_CV.pdf">CV</a>
+        <a href="https://woongchanjeon.com/research/">RESEARCH</a>
+        <a href="https://woongchanjeon.com/teaching/">TEACHING</a>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Macroeconomic Modeling of Climate Change</h1>
+
+      <section class="section">
+        <h2>Instructor</h2>
+        <p>
+          Woongchan Jeon (<a href="https://woongchanjeon.com" style="color:#1A0CAB; font-weight:bold">Contact Info</a>)
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Announcements</h2>
+        <p>I will be co-teaching this class with Dr. Maria Alsina-Pujols in Spring 2025.</p>
+      </section>
+
+      <section class="section">
+        <h2>Section Notes</h2>
+        <!-- 주차별 노트가 생기면 아래 UL에 항목을 추가하세요 -->
+        <ul>
+          <!-- 예시 템플릿:
+          <li>
+            Week 1 — 
+            <a href="https://woongchanjeon.com/teaching/363_1190_00L/lecture_note/363_1190_00L_S25_W1.pdf" style="color:#1A0CAB; font-weight:bold">
+              A Closed-Economy One-Period Macroeconomic Model I
+            </a>
+          </li>
+          -->
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener('orientationchange', function(){ location.reload(); }, false);
+    }
+  </script>
 </body>
 </html>
