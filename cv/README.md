@@ -1,1 +1,1 @@
-# Curriculum Vitae - Updated on June 9, 2026
+# Curriculum Vitae - Updated on October 28, 2026
